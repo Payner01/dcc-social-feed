@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 
 const AddPostForm = (props) => {
 
-    const [posts, setPosts] = useState('');
+    const [name, setName] = useState('');
+    const [post, setPost] = useState('');
+    
 
     function handleSubmit(event) {
         event.preventDefault();
         let newEntry = {
-            posts: posts
+            name: name,
+            post: post
         };
         console.log(newEntry);
         props.addNewPostProperty(newEntry)
@@ -19,9 +22,9 @@ const AddPostForm = (props) => {
         <form onSubmit={handleSubmit} className='form-grid'>
             <div className='form-control'>
                 <label>Name</label>
-                <input type='text' className='form-control'/>
+                <input type='text' className='form-control' value={name} onChange={(event) => setName(event.target.value)} />
                 <label>Post</label>
-                <input type='text' className='form-control'/>
+                <input type='text' className='form-control' value={post} onChange={(event) => setPost(event.target.value)}/>
             </div>
             
             
