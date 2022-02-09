@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import AddPostForm from './Components/AddPost/AddPostForm';
 
 function App() {
+
+  const [posts, setPosts] = useState([{name: 'Bryce', post: 'today is wednesday aka humpday'}]);
+
+  function addNewPost(post){
+
+    let tempPosts = [...posts, post];
+
+    setPosts(tempPosts);
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AddPostForm addNewPostProperty={addNewPost}/>
     </div>
   );
 }
