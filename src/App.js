@@ -5,7 +5,7 @@ import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: 'Bryce', postEntry: 'today is wednesday aka humpday'}]);
+  const [posts, setPosts] = useState([{name: 'Bryce', post: 'Today is wednesday aka humpday'}]);
 
   function addNewPost(post){
 

@@ -1,3 +1,5 @@
+import { UpdownButton } from "@lyket/react";
+
 
 const DisplayPosts = (props) => {
 
@@ -9,6 +11,7 @@ const DisplayPosts = (props) => {
                         <div class="form-control">
                         <h4 class="media-heading">{post.name}</h4>
                         <div>{post.post}</div>
+                        <UpdownButton namespace="like-dislike-button" id="like-dislike"/>
                         </div>
                     </div>
                 );
