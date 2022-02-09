@@ -20,8 +20,6 @@ const AddPostForm = (props) => {
             <div className='form-control'>
                 <label>Name</label>
                 <input type='text' className='form-control'/>
-            </div>
-            <div className='form-control'>
                 <label>Post</label>
                 <input type='text' className='form-control'/>
             </div>

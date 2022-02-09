@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import AddPostForm from './Components/AddPost/AddPostForm';
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: 'Bryce', post: 'today is wednesday aka humpday'}]);
+  const [posts, setPosts] = useState([{name: 'Bryce', postEntry: 'today is wednesday aka humpday'}]);
 
   function addNewPost(post){
 
@@ -15,8 +16,14 @@ function App() {
   }
 
   return (
-    <div>
-      <AddPostForm addNewPostProperty={addNewPost}/>
+    <div className='container-fluid'>
+      <div className='form'>
+        <AddPostForm addNewPostProperty={addNewPost}/>
+      </div>
+      <div className='feed'>
+        <DisplayPosts parentPosts={posts} />
+      </div>
+      
     </div>
   );
 }
