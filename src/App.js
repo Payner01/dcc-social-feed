@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import AddPostForm from './Components/AddPost/AddPostForm';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
@@ -16,14 +17,17 @@ function App() {
   }
 
   return (
-    <div className='container-fluid'>
-      <div className='form'>
-        <AddPostForm addNewPostProperty={addNewPost}/>
+
+    <div className='nav-bar'>
+      <NavBar />
+      <div className='container-fluid'>
+        <div className='form'>
+          <AddPostForm addNewPostProperty={addNewPost}/>
+        </div>
+        <div className='form'>
+          <DisplayPosts parentPosts={posts} />
+        </div>
       </div>
-      <div className='feed'>
-        <DisplayPosts parentPosts={posts} />
-      </div>
-      
     </div>
   );
 }

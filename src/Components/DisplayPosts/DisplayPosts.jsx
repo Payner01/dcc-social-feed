@@ -1,5 +1,5 @@
 import { UpdownButton } from "@lyket/react";
-
+import './DisplayPosts.css';
 
 const DisplayPosts = (props) => {
 
@@ -7,11 +7,11 @@ const DisplayPosts = (props) => {
     <body>
         {props.parentPosts.map((post) => {
             return ( 
-                <div className="media" class='border'>
-                        <div class="form-control">
-                        <h4 class="media-heading">{post.name}</h4>
-                        <div>{post.post}</div>
-                        <UpdownButton namespace="like-dislike-button" id="like-dislike"/>
+                <div className="form-grid">
+                        <div className="form-control" >
+                        <h4 className="form-heading">{post.name}</h4>
+                        <div className="post-content">{post.post}</div>
+                        <UpdownButton nameSpace="like-dislike-button" id="like-dislike" className="like-button"/>
                         </div>
                     </div>
                 );
