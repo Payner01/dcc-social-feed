@@ -17,15 +17,16 @@ function App() {
   }
 
   return (
-
-    <div className='nav-bar'>
-      <NavBar />
-      <div className='container-fluid'>
-        <div className='form'>
-          <AddPostForm addNewPostProperty={addNewPost}/>
-        </div>
-        <div className='form'>
-          <DisplayPosts parentPosts={posts} />
+    <div className='page'>
+      <div className='nav-bar'>
+        <NavBar />
+        <div className='container-fluid'>
+          <div className='form'>
+            <AddPostForm addNewPostProperty={addNewPost}/>
+          </div>
+          <div className='form'>
+            <DisplayPosts parentPosts={posts} />
+          </div>
         </div>
       </div>
     </div>

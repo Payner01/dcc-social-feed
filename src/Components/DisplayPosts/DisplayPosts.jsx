@@ -11,7 +11,7 @@ const DisplayPosts = (props) => {
                         <div className="form-control" >
                         <h4 className="form-heading">{post.name}</h4>
                         <div className="post-content">{post.post}</div>
-                        <UpdownButton nameSpace="like-dislike-button" id="like-dislike" className="like-button"/>
+                        <UpdownButton hideCounterIfLessThan={2} nameSpace="like-dislike-button" id="like-dislike" className="like-button"/>
                         </div>
                     </div>
                 );

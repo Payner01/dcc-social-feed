@@ -14,7 +14,9 @@ const AddPostForm = (props) => {
             post: post
         };
         console.log(newEntry);
-        props.addNewPostProperty(newEntry)
+        props.addNewPostProperty(newEntry);
+        setName('');
+        setPost(''); 
     }
 
     return ( 
