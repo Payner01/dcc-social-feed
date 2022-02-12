@@ -6,7 +6,7 @@ import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: 'Bryce', post: 'Today is wednesday aka humpday'}]);
+  const [posts, setPosts] = useState([{name: 'Bryce', post: 'Today is Thursday aka not humpday'}]);
 
   function addNewPost(post){
 
@@ -18,8 +18,7 @@ function App() {
 
   return (
     <div className='page'>
-      <div className='nav-bar'>
-        <NavBar />
+      <div className='nav-bar'><NavBar /></div>
         <div className='container-fluid'>
           <div className='form'>
             <AddPostForm addNewPostProperty={addNewPost}/>
@@ -28,7 +27,7 @@ function App() {
             <DisplayPosts parentPosts={posts} />
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }
