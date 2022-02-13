@@ -6,7 +6,7 @@ import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: 'Bryce', post: 'Today is Thursday aka not humpday'}]);
+  const [posts, setPosts] = useState([{name: 'Bryce Payne', post: 'Today is Wednesday aka HUMPDAY!!'},{name: 'Alex Johnson', post: 'Today I am under cover...'}]);
 
   function addNewPost(post){
 
@@ -27,7 +27,6 @@ function App() {
             <DisplayPosts parentPosts={posts} />
           </div>
         </div>
-      
     </div>
   );
 }
