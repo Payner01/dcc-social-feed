@@ -1,5 +1,13 @@
 
-.container-fluid{
+.container{
+    width: 60%;
     background-color: #393d3f;
     padding:1.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.page {
+    background-color: #393d3f;
 }

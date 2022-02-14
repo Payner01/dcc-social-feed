@@ -6,7 +6,7 @@ import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: 'Bryce Payne', post: 'Today is Wednesday aka HUMPDAY!!'},{name: 'Alex Johnson', post: 'Today I am under cover...'}]);
+  const [posts, setPosts] = useState([{name: 'Bryce Payne', post: 'Today is Wednesday aka HUMPDAY!!'},{name: 'Alex Johnson', post: 'Today I am under cover...'},{name: 'Jeff Bezo', post: 'Hello Everyone'},{name: 'Jeff Johnson', post: 'Blue is my favorite color'}]);
 
   function addNewPost(post){
 
@@ -17,17 +17,17 @@ function App() {
   }
 
   return (
-    <div className='page'>
-      <div className='nav-bar'><NavBar /></div>
-        <div className='container-fluid'>
-          <div className='form'>
-            <AddPostForm addNewPostProperty={addNewPost}/>
-          </div>
-          <div className='form'>
-            <DisplayPosts parentPosts={posts} />
-          </div>
+    
+      <><div className='nav-bar'><NavBar /></div><div className='page'>
+      <div className='container'>
+        <div className='form'>
+          <AddPostForm addNewPostProperty={addNewPost} />
         </div>
-    </div>
+        <div className='form'>
+          <DisplayPosts parentPosts={posts} />
+        </div>
+      </div>
+    </div></>
   );
 }
 
